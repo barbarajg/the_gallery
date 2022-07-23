@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Artwork</title>
+    <%- include('bootstrap') %>
+</head>
+<body>
+    <%- include('navbar') %>
+
+    <h2>Edit work</h2>
+
+    <form action="/work/saveWorkEditForm/<%= result[0].work_id %>/<%= result[0].artist_id %>" method="post" enctype="multipart/form-data" >
+        <div class="form-group">
+          <label for="title">Title</label>
+          <input type="text" class="form-control" id="title" name="title" aria-describedby="" placeholder="Enter title" value="<%= result[0].title %>">
+        </div>
+        <div class="form-group">
+            <label for="description">Description</label>
+            <textarea class="form-control rows="3" id="description" name="description" aria-describedby="" placeholder="Describe your work" ><%= result[0].description %></textarea>
+        </div>
+        <div class="form-group">
+            <label class="form-file-label" for="img" name="img" >Work photo</label>
+            <input type="file" class="form-control" id="img" name="img">          
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+
+
+</body>
+</html>

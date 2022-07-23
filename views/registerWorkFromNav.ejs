@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Artwork</title>
+    <%- include('bootstrap') %>
+</head>
+<body>
+
+    <script>
+        let selectArtists = document.getElementById("artist_select");
+    </script>
+
+    <%- include('navbar') %>
+
+    <h2>Artwork registration form</h2>
+
+    <form action="" method="post" enctype="multipart/form-data" >
+        <div class="form-group">
+          <label for="title">Title</label>
+          <input type="text" class="form-control" id="title" name="title" aria-describedby="" placeholder="Enter title">
+        </div>
+        <div class="form-group">
+            <label for="description">Description</label>
+            <textarea class="form-control rows="3" id="description" name="description" aria-describedby="" placeholder="Describe your work"></textarea>
+        </div>
+        <div class="form-group">
+            <label class="form-file-label" for="img" name="img" >Work photo</label>
+            <input type="file" class="form-control" id="img" name="img">          
+        </div>
+        <div>
+            
+            <select class="custom-select artist_select" id="artist_select">
+                
+                <option selected>Select Artist</option>
+                
+                <% resultArtist.forEach(artist => { %>
+                    selectArtists.appendChild(<%= artist.artist_name %>); 
+                    <option value="<%= artist.artist_id %>"><%= artist.name %></option>              
+                <% }) %>
+
+                
+              </select>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+        
+      </form>
+
+
+</body>
+</html>
