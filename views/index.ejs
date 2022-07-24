@@ -7,29 +7,124 @@
   </head>
   <body>
     <%- include('navbar') %>
-    <h1>The Gallery</h1>
-    <p>Welcome to The Gallery</p>
+    <div class="container-fluid body-general">
+      <div class="row row-hero">
+        <div class="col-12 col-hero d-flex align-items-center text-center">
+          <p class="p-pre-title">Welcome to</p>
+          <h1 class="h1-web-title">The Gallery</h1>
+          <p class="p-post-title">All Talent in One Place</p>
+        </div>
+      </div>
 
-    <h2>Bucle artistas</h2>
-    <% resultArtist.forEach(artist => { %>
-    <a href="/artist/oneArtist/<%= artist.artist_id %>">
-      <img
-        src="/images/artists/<%= artist.img %>"
-        alt=""
-        width="200"
-      />
-    </a>
-    <p><%= artist.name %></p>
+      <div class="container">
+        <div class="row row-introduction">
+          <div class="col-lg-6 col-sm-12 col-xs-12 col-introduction">
+            <h3>About Us</h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus, laboriosam. Harum minus cum, laborum distinctio placeat fuga eos reiciendis aspernatur ab veniam. Facilis iste voluptatibus deleniti magnam quaerat itaque totam.</p>
+          </div>
+          <div class="col-lg-6 col-sm-12 col-xs-12 col-introduction">
+            <h3>What we do</h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus, laboriosam. Harum minus cum, laborum distinctio placeat fuga eos reiciendis aspernatur ab veniam. Facilis iste voluptatibus deleniti magnam quaerat itaque totam.</p>
+          </div>
+        </div>
+      </div>
 
-    <% }) %>
+      <div class="container-fluid container-testimony">
+        <div class="row row-testimony">
+          <div class="col-lg-12 col-testimony d-flex">
+            <div class="recuadro-testimony">
+              <img class="img-testimony" src="/images/artists/testimony.jpg" alt="">
+              <h3 class="h3-testimony">"The help I needed"</h3>
+              <div class="recuadro-testimony-interior">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus quia voluptatum numquam quod incidunt saepe eveniet unde eius dolorum dolore.</p>
+                <a class="btn-general btn-testimony" href="/artist/allArtists">See Our Artists</a>
+              </div>
+            </div>           
 
-    <hr />
-    <h2>Bucle obras</h2>
-    <% resultWork.forEach(work => { %>
-    <img src="/images/works/<%= work.img %>" alt="" width="200" />
-    <p><%= work.title %></p>
-    <% }) %>
+          </div>
+        </div>
+      </div>
 
+      <div class="title-our-artists">
+        <h3>Our Artists</h3>
+      </div>    
+      <div class="container container-artists-loop d-flex">               
+        <% resultArtist.forEach(artist => { %>
+        <div class="row row-artists-loop">  
+          
+          <div class="col-lg-4 col-sm-6 col-xs-12 col-artists-loop_ d-flex">
+            <a href="/artist/oneArtist/<%= artist.artist_id %>">
+              <img class="img-artists-loop"
+                src="/images/artists/<%= artist.img %>"
+                alt=""
+                width="280"
+              />
+              <div class="artist-name-in-loop">
+                <h5 class="h5-artists-name" style="color:black;"><%= artist.alias %></h5>
+              </div>
+            </a>
+          
+          </div>
+
+        </div>
+        <% }) %>   
+
+        <% resultArtist.forEach(artist => { %>
+        <div class="row row-artists-loop">          
+          <div class="col-lg-4 col-sm-6 col-xs-12 col-artists-loop_ d-flex">        
+            <div class="card">
+              <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                <img src="/images/artists/<%= artist.img %>" class="img-fluid"/>
+                <a href="#!">
+                  <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                </a>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="/artist/oneArtist/<%= artist.artist_id %>" class="btn btn-primary">Button</a>
+              </div>
+            </div>
+          </div>
+          <% }) %> 
+
+          <div class="col-lg-4 col-sm-6 col-xs-12 col-artists-loop_ d-flex">        
+            <div class="card">
+              <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                <img src="https://mdbcdn.b-cdn.net/img/new/standard/nature/111.webp" class="img-fluid"/>
+                <a href="#!">
+                  <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                </a>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#!" class="btn btn-primary">Button</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-sm-6 col-xs-12 col-artists-loop_ d-flex">        
+            <div class="card">
+              <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                <img src="https://mdbcdn.b-cdn.net/img/new/standard/nature/111.webp" class="img-fluid"/>
+                <a href="#!">
+                  <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                </a>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#!" class="btn btn-primary">Button</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+  </div>
+
+  <%- include('footer') %>
 
   </body>
 </html>

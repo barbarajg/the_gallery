@@ -1,8 +1,331 @@
+@font-face {
+  font-family: AftikaBold;
+  src: url(FontsFree-Net-AftikaBold.ttf);
+}
+
+h1,
+h2,
+h3,
+h4,
+ul,
+li {
+  font-family: AftikaBold;
+}
+
+p,
+a {
+  font-family: 'Montserrat', sans-serif;
+}
+
+
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  padding: 0px;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+.body-general {
+  padding: 0px !important;
+  margin-bottom: -10px;
 }
 
 a {
-  color: #00B7FF;
+  color: white !important;
+  text-decoration: none !important;
+}
+
+.menu-nav {
+  justify-content: end !important;
+}
+
+.nav-item,
+.nav-link {
+  padding-right: 20px;
+  color: white !important;
+}
+
+.nav-link:hover,
+.navbar-brand:hover {
+  color: #ffca00 !important;
+}
+
+.p-pre-title {
+  font-size: 2em;
+  text-shadow: 1px 1px 3px black;
+}
+
+.p-post-title {
+  font-size: 1.2em;
+}
+
+.h1-web-title {
+  font-size: 6em;
+  text-shadow: 1px 1px 5px black;
+}
+
+.btn-general {
+  background-color: #cf8d2a;
+  border: 1px solid #cf8d2a;
+  width: 150px;
+  height: 40px;
+  border-radius: 20px;
+  color: white;
+  font-size: 1em;
+  font-weight: bold;
+}
+
+.btn-general:hover {
+  background-color: white;
+  border: 1px solid #cf8d2a;
+  color: #cf8d2a !important;
+}
+
+a:hover {
+  color: #cf8d2a !important;
+}
+
+.col-web-title {
+  /* color: white; */
+  /* background-color: rgb(67, 67, 67); */
+  text-align: center;
+  padding-top: 60px !important;
+  padding-bottom: 50px !important;
+}
+
+.artists-loop {
+  text-align: center;
+}
+
+.col-hero {
+  height: 80vh;
+  color: white;
+  background-image: url("../images/works/Cheer_up.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: rgba(0, 0, 0, 0.435);
+  background-blend-mode: soft-light;
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.col-introduction {
+  padding-top: 50px;
+  padding-bottom: 30px;
+  text-align: center;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.row-testimony {
+  height: 500px;
+}
+
+.container-testimony {
+  background-color: rgb(236, 232, 232);
+}
+
+.col-testimony {
+  height: 500px;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.recuadro-testimony {
+  width: 50vw;
+  height: 400px;
+  background-color: white;
+  margin: 0 auto;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.img-testimony {
+  height: 200px;
+  border-radius: 180px;
+  margin-top: -90px;
+  margin-bottom: 40px;
+}
+
+.recuadro-testimony-interior {
+  padding: 5px 60px 5px 60px;
+}
+
+.btn-testimony {
+  margin-top: 25px;
+  padding: 10px;
+}
+
+.title-our-artists {
+  text-align: center;
+  margin-top: 60px;
+}
+
+.container-artists-loop {
+  flex-wrap: wrap;
+  padding-right: 100px !important;
+  padding-left: 100px !important;
+  justify-content: center;
+  text-align: center;
+  /* margin-top: 30px; */
+}
+
+.row-artists-loop {
+  /* margin-bottom: 20px; */
+}
+
+.col-artists-loop1 {
+  text-align: center;
+  /* margin-top: 60px !important; */
+  /* margin-bottom: 40px; */
+  text-align: center;
+}
+
+.col-artists-loop_ {
+  text-align: center;
+  /* background-image: url("/images/artists/<%= artist.img %>"); */
+  height: 300px;
+  width: 300px !important;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 10px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.col-artists-loop_ a {
+  /* margin-top: -60px; */
+}
+
+.col-artists-loop {
+  text-align: center;
+}
+
+.col-artists-loop img {
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.img-artists-loop {
+  margin: 15px;
+  border-radius: 5px !important;
+  transition: transform .5s ease;
+}
+
+.img-artists-loop:hover {
+  transform: scale(1.1);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.h5-artists-name {
+  color: #cf8d2a !important;
+  font-weight: bold;
+}
+
+.row-logos {
+  justify-content: center;
+}
+
+.row-icons {
+  background-color: rgb(236, 232, 232);
+  padding: 30px 120px 30px 120px;
+}
+
+.row-icons .fondo-gris {
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 40px;
+  background-color: rgb(236, 232, 232);
+}
+
+.one-logo img {
+  width: 100px;
+}
+
+.container-footer {
+  padding: 60px;
+  text-align: center;
+  padding-top: 40px;
+  padding-bottom: 25px;
+  margin-top: 60px;
+}
+
+footer {
+  background-color: #212529;
+  color: white;
+  margin: 0px;
+}
+
+.col-footer {
+  text-align: center;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.h5-footer {
+  /* text-decoration: underline; */
+}
+
+
+.hr-footer {
+  margin: 0 auto;
+  width: 20vw;
+  color: #ffca00;
+  margin-bottom: 20px;
+}
+
+.ul-footer {
+  list-style-type: none;
+  padding: 0px;
+  font-weight: 300 !important;
+}
+
+.ul-footer li {
+  margin-bottom: 10px;
+  font-weight: 300 !important;
+}
+
+.li-footer {
+  font-weight: 300 !important;
+  font-size: 0.9em;
+}
+
+.ul-footer li .li-footer-normal {
+  cursor: default !important
+}
+
+.li-footer-normal a {
+  cursor: default !important;
+  font-size: 0.9em;
+}
+
+.li-footer-normal a:hover {
+  color: white !important;
+}
+
+.footer2 {
+  margin-top: 260px;
+  margin-bottom: -40px !important;
+}
+
+.footer2 .container-footer {
+  padding-top: 0px !important;
+}
+
+.body2 {
+  flex-direction: column;
+}
+
+.card {
+  margin: 15px;
+  border-radius: 5px !important;
+  transition: transform .5s ease;
+}
+
+.card:hover {
+  transform: scale(1.1);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }

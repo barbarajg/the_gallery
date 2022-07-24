@@ -5,9 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+
+    <link rel='stylesheet' href='/stylesheets/style.css' />
     <%- include('bootstrap') %>
 </head>
-  <body>
+  <body class="body2 d-flex">
     <%- include('navbar') %>
     <h1>Estás en vista login.ejs</h1>
     <form action="/artist/login" method="post">
@@ -15,5 +17,11 @@
       <input type="password" name="password" id="" placeholder="Password" />
       <button type="submit">Login</button>
     </form>
+    
+    <footer class="footer2">
+      <%- include('footer') %>
+    </footer>
+    
+
   </body>
 </html>

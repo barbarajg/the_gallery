@@ -1,0 +1,16 @@
+<script>
+    console.log("ha entrado en el script");
+    let artist_id=0;
+    // Recoge el formulario
+    let formAddWork = document.getElementById("formAddWork");
+    console.log(formAddWork);
+    // Se ejecuta cuando se cambia el select
+    function handleSelectArtistChange() { 
+        let selectArtist = document.getElementById("artist_select");
+        artist_id = selectArtist.options[selectArtist.selectedIndex].value;
+        // Modifica el action del formulario 
+        // añadiendo el artist_id
+        formAddWork.action = "/work/saveWorkFormFromNav/" + artist_id;
+        console.log(artist_id);
+    }
+</script>

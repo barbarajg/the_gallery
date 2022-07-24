@@ -76,7 +76,11 @@ class Work {
     // Guarda el formulario de editar obra (desde navbar)
     saveWorkFormFromNav = (req, res) => {
         let artist_id = req.params.artist_id;
-        let { title, description} = req.body;
+        if(artist_id == 0){
+          res.send("No se ha seleccionado el artista");
+          return;
+        }
+        let { title, description } = req.body;        
     
         let sql = `INSERT INTO work (title, description, artist_id) VALUES ("${title}","${description}",${artist_id})`;
     
@@ -87,8 +91,8 @@ class Work {
     
         connection.query(sql, (error, result) => {
           if (error) throw error;
-          //res.redirect(`/artist/oneArtist/${artist_id}`);
-          res.send("Obra registrada");
+          res.redirect(`/artist/oneArtist/${artist_id}`);
+          //res.send("Obra registrada");
 
         });
     }; 

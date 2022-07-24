@@ -25,7 +25,7 @@ router.get("/deleteWork/:work_id/:artist_id", workController.deleteWork);
 router.get("/showWorkFormFromNav", workController.showWorkFormFromNav);
 
 // localhost:3000/work/saveWorkFormFromNav/:artist_id
-router.post("/showWorkFormFromNav/:artist_id", workController.saveWorkFormFromNav);
+router.post("/saveWorkFormFromNav/:artist_id", uploadImage("works"), workController.saveWorkFormFromNav);
 
 
 module.exports = router;
