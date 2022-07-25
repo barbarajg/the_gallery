@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>The Gallery</title>
+    <meta content="width=device-width, initial-scale=0.97" name="viewport" />
     <link rel='stylesheet' href='/stylesheets/style.css' />
     <%- include('bootstrap') %>
   </head>
@@ -19,7 +20,7 @@
       <div class="container">
         <div class="row row-introduction">
           <div class="col-lg-6 col-sm-12 col-xs-12 col-introduction">
-            <h3>About Us</h3>
+            <h3>Our Community</h3>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus, laboriosam. Harum minus cum, laborum distinctio placeat fuga eos reiciendis aspernatur ab veniam. Facilis iste voluptatibus deleniti magnam quaerat itaque totam.</p>
           </div>
           <div class="col-lg-6 col-sm-12 col-xs-12 col-introduction">
@@ -69,60 +70,7 @@
         </div>
         <% }) %>   
 
-        <% resultArtist.forEach(artist => { %>
-        <div class="row row-artists-loop">          
-          <div class="col-lg-4 col-sm-6 col-xs-12 col-artists-loop_ d-flex">        
-            <div class="card">
-              <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-                <img src="/images/artists/<%= artist.img %>" class="img-fluid"/>
-                <a href="#!">
-                  <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-                </a>
-              </div>
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="/artist/oneArtist/<%= artist.artist_id %>" class="btn btn-primary">Button</a>
-              </div>
-            </div>
-          </div>
-          <% }) %> 
-
-          <div class="col-lg-4 col-sm-6 col-xs-12 col-artists-loop_ d-flex">        
-            <div class="card">
-              <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-                <img src="https://mdbcdn.b-cdn.net/img/new/standard/nature/111.webp" class="img-fluid"/>
-                <a href="#!">
-                  <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-                </a>
-              </div>
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#!" class="btn btn-primary">Button</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-sm-6 col-xs-12 col-artists-loop_ d-flex">        
-            <div class="card">
-              <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-                <img src="https://mdbcdn.b-cdn.net/img/new/standard/nature/111.webp" class="img-fluid"/>
-                <a href="#!">
-                  <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-                </a>
-              </div>
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#!" class="btn btn-primary">Button</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-
-  </div>
+      </div>
 
   <%- include('footer') %>
 

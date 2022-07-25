@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <title>The Gallery</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,7 +12,8 @@
 <body>
     <%- include('navbar') %>
 
-    <h2>Artwork registration form</h2>
+    <div class="container container-edit-work">
+      <h2 class="h2-edit-work">Add work</h2>
 
     <form action="/work/saveWork/<%= artist_id %>" method="post" enctype="multipart/form-data" >
         <div class="form-group">
@@ -26,9 +28,10 @@
             <label class="form-file-label" for="img" name="img" >Work photo</label>
             <input type="file" class="form-control" id="img" name="img">          
         </div>
-        <button  class="btn btn-primary">Submit</button>
+        <button  class="btn btn-submit-general">Submit</button>
+        <div class="filler"></div>
       </form>
-
+    </div>
 
       <%- include('footer') %>
 

@@ -64,16 +64,14 @@ class Work {
 
     // Muestra formulario de registro de nueva obra (desde navbar)
     showWorkFormFromNav = (req, res) => {
-        //let artist_id = req.params.artist_id;
         let sql = `SELECT * FROM artist`;
-        console.log("OKKKKKKK");
         connection.query(sql, (error, resultArtist) => {
             if (error) throw error;
             res.render("registerWorkFromNav", { resultArtist });
           });        
     };
 
-    // Guarda el formulario de editar obra (desde navbar)
+    // Guarda el formulario de registrar obra (desde navbar)
     saveWorkFormFromNav = (req, res) => {
         let artist_id = req.params.artist_id;
         if(artist_id == 0){
@@ -92,8 +90,6 @@ class Work {
         connection.query(sql, (error, result) => {
           if (error) throw error;
           res.redirect(`/artist/oneArtist/${artist_id}`);
-          //res.send("Obra registrada");
-
         });
     }; 
       

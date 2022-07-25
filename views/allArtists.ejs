@@ -2,26 +2,34 @@
 <html>
   <head>
     <title>The Gallery</title>
+    <meta content="width=device-width, initial-scale=0.97" name="viewport" />
     <link rel='stylesheet' href='/stylesheets/style.css' />
     <%- include('bootstrap') %>
   </head>
   <body>
     <%- include('navbar') %>
-    <h1>The Gallery</h1>
-    <p>Welcome to The Gallery</p>
 
-    <h2>Bucle artistas</h2>
-    <% resultArtist.forEach(artist => { %>
-    <a href="/artist/oneArtist/<%= artist.artist_id %>">
-      <img
-        src="/images/artists/<%= artist.img %>"
-        alt=""
-        width="200"
-      />
-    </a>
-    <p><%= artist.name %></p>
-
-    <% }) %>
+    <div class="title-our-artists">
+      <h3>Our Artists</h3>
+    </div>    
+    <div class="container container-artists-loop d-flex">               
+      <% resultArtist.forEach(artist => { %>
+      <div class="row row-artists-loop">          
+        <div class="col-lg-4 col-sm-6 col-xs-12 col-artists-loop_ d-flex">
+          <a href="/artist/oneArtist/<%= artist.artist_id %>">
+            <img class="img-artists-loop"
+              src="/images/artists/<%= artist.img %>"
+              alt=""
+              width="280"
+            />
+            <div class="artist-name-in-loop">
+              <h5 class="h5-artists-name" style="color:black;"><%= artist.alias %></h5>
+            </div>
+          </a>        
+        </div>
+      </div>
+      <% }) %>   
+    </div>
 
 
     <%- include('footer') %>

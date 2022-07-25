@@ -12,6 +12,10 @@ li {
   font-family: AftikaBold;
 }
 
+h3 {
+  font-size: 1.55rem;
+}
+
 p,
 a {
   font-family: 'Montserrat', sans-serif;
@@ -42,6 +46,7 @@ a {
 .nav-link {
   padding-right: 20px;
   color: white !important;
+  font-size: 1em;
 }
 
 .nav-link:hover,
@@ -72,6 +77,8 @@ a {
   color: white;
   font-size: 1em;
   font-weight: bold;
+  margin-top: 25px;
+  padding: 10px;
 }
 
 .btn-general:hover {
@@ -80,13 +87,25 @@ a {
   color: #cf8d2a !important;
 }
 
+.btn-submit-general {
+  background-color: #cf8d2a !important;
+  border: 1px solid #cf8d2a !important;
+  width: 150px;
+  height: 40px;
+  border-radius: 20px !important;
+  color: white !important;
+  font-size: 1em;
+  font-weight: bold;
+  margin-top: 25px;
+  padding: 10px !important;
+  padding-top: 4px !important;
+}
+
 a:hover {
   color: #cf8d2a !important;
 }
 
 .col-web-title {
-  /* color: white; */
-  /* background-color: rgb(67, 67, 67); */
   text-align: center;
   padding-top: 60px !important;
   padding-bottom: 50px !important;
@@ -152,11 +171,6 @@ a:hover {
   padding: 5px 60px 5px 60px;
 }
 
-.btn-testimony {
-  margin-top: 25px;
-  padding: 10px;
-}
-
 .title-our-artists {
   text-align: center;
   margin-top: 60px;
@@ -168,23 +182,16 @@ a:hover {
   padding-left: 100px !important;
   justify-content: center;
   text-align: center;
-  /* margin-top: 30px; */
-}
-
-.row-artists-loop {
-  /* margin-bottom: 20px; */
+  margin-bottom: 60px;
 }
 
 .col-artists-loop1 {
   text-align: center;
-  /* margin-top: 60px !important; */
-  /* margin-bottom: 40px; */
   text-align: center;
 }
 
 .col-artists-loop_ {
   text-align: center;
-  /* background-image: url("/images/artists/<%= artist.img %>"); */
   height: 300px;
   width: 300px !important;
   background-size: cover;
@@ -194,10 +201,6 @@ a:hover {
   text-align: center;
   justify-content: center;
   align-items: center;
-}
-
-.col-artists-loop_ a {
-  /* margin-top: -60px; */
 }
 
 .col-artists-loop {
@@ -218,11 +221,6 @@ a:hover {
 .img-artists-loop:hover {
   transform: scale(1.1);
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-}
-
-.h5-artists-name {
-  color: #cf8d2a !important;
-  font-weight: bold;
 }
 
 .row-logos {
@@ -250,7 +248,6 @@ a:hover {
   text-align: center;
   padding-top: 40px;
   padding-bottom: 25px;
-  margin-top: 60px;
 }
 
 footer {
@@ -266,7 +263,7 @@ footer {
 }
 
 .h5-footer {
-  /* text-decoration: underline; */
+  font-size: 1.1rem;
 }
 
 
@@ -328,4 +325,293 @@ footer {
 .card:hover {
   transform: scale(1.1);
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.container-profile {
+  margin-top: 70px !important;
+  text-align: center;
+}
+
+.h3-profile-artist-data {
+  font-size: 1.6rem !important;
+}
+
+.h5-profile-artist-data {
+  font-size: 1.1rem !important;
+  font-weight: 400;
+}
+
+.alias {
+  font-style: italic;
+}
+
+.container-profile h2 {
+  margin-bottom: 50px !important;
+}
+
+.row-profile {
+  justify-content: center;
+}
+
+.col-profile-photo {
+  height: 500px;
+
+}
+
+.col-profile-photo {
+  height: 500px;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  width: 35% !important;
+  margin-left: 4em !important;
+  border-radius: 5px;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.col-profile-text {
+  text-align: left;
+  width: 30% !important;
+  margin-left: 3em !important;
+  padding-top: 40px;
+}
+
+.btn-profile {
+  padding-top: 4px;
+  margin: 6px;
+  margin-bottom: 15px;
+}
+
+.btn-profile-work {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  text-align: center;
+}
+
+.btn-submit-general {
+  font-weight: bold !important;
+  margin-bottom: 40px;
+}
+
+.container-artwork-big {
+  background-color: rgb(236, 232, 232);
+  padding-top: 40px;
+  margin-top: 40px;
+  padding-bottom: 50px;
+}
+
+.title-profile-artwork {
+  text-align: center;
+  margin-top: 60px;
+}
+
+.container-profile-artwork {
+  flex-wrap: wrap;
+  padding-right: 100px !important;
+  padding-left: 100px !important;
+  justify-content: center;
+  text-align: center;
+}
+
+.col-profile-artwork {
+  text-align: center;
+  height: 300px;
+  width: 300px !important;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 10px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.row-profile-artwork-loop {
+  width: 50% !important;
+  justify-content: center;
+  margin-right: 5px;
+  margin-left: 5px;
+  padding: 0px;
+
+}
+
+.col-profile-artwork {
+  flex: auto !important;
+}
+
+.col-profile-artwork-text {
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+}
+
+.work-title-profile {
+  font-weight: bold;
+}
+
+.work-description {
+  font-size: 0.8em;
+}
+
+.container-edit-work {
+  width: 60% !important;
+}
+
+.container-edit-work div {
+  margin-top: 10px;
+}
+
+.h2-edit-work {
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 30px;
+}
+
+.col-login {
+  justify-content: center
+}
+
+.filler {
+  height: 100px;
+  color: white;
+}
+
+.filler2 {
+  height: 200px;
+  color: white;
+}
+
+.filler3 {
+  height: 300px;
+  color: white;
+}
+
+.row-grey-login {
+  justify-content: center;
+}
+
+.col-grey-login {
+  background-color: rgb(236, 232, 232);
+  width: 400px !important;
+}
+
+.col-profile-artwork-photo img {
+  transition: transform .5s ease;
+}
+
+.col-profile-artwork-photo img:hover {
+  transform: scale(3);
+}
+
+@media (max-width: 500px) {
+
+  .nav-link {
+    text-align: center;
+  }
+
+  .col-hero {
+    height: 50vh !important;
+  }
+
+  .h1-web-title {
+    font-size: 3em !important;
+  }
+
+  .row-introduction {
+    margin: 0 auto !important;
+  }
+
+  .col-introduction p {
+    margin-left: 20px !important;
+    margin-right: 20px !important;
+  }
+
+  .row-testimony {
+    margin-top: 60px !important;
+  }
+
+  .recuadro-testimony {
+    width: 80vw !important;
+  }
+
+  .col-testimony {
+    align-items: center !important;
+  }
+
+  .container-footer {
+    margin-top: 50px;
+  }
+
+  .btn-submit-general {
+    margin-left: 60px;
+  }
+
+  .container-edit-work {
+    width: 300px !important;
+  }
+
+  .btn-login {
+    margin-left: 0px !important;
+  }
+
+  .filler3 {
+    height: 200px !important;
+  }
+
+  .container-profile {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .col-profile-photo {
+    width: 90% !important;
+    margin-left: 0px !important;
+  }
+
+  .col-profile-text {
+    width: 90% !important;
+    margin-left: 0px !important;
+  }
+
+  .container-artwork-big {
+    display: flex;
+    flex-direction: column;
+    padding-top: 0px;
+  }
+
+  .col-profile-artwork {
+    width: 100% !important;
+    margin-left: 0px !important;
+  }
+
+  .row-profile-artwork-loop {
+    width: 100% !important;
+  }
+
+  .col-profile-artwork {
+    height: 100% !important;
+  }
+
+  .col-profile-artwork-text {
+    text-align: center;
+    align-items: center;
+  }
+
+  .row-profile-artwork-inside {
+    margin-top: 20px !important;
+  }
+
+  .footer-profile .container-footer {
+    margin-top: 0px !important;
+  }
+
+  .col-profile-artwork {
+    margin: 0 auto;
+  }
+
+  .col-profile-artwork-photo img {
+    width: 350px !important;
+  }
+
 }

@@ -11,16 +11,45 @@
 </head>
   <body class="body2 d-flex">
     <%- include('navbar') %>
-    <h1>Estás en vista login.ejs</h1>
-    <form action="/artist/login" method="post">
-      <input type="text" name="email" id="" placeholder="Email" />
-      <input type="password" name="password" id="" placeholder="Password" />
-      <button type="submit">Login</button>
-    </form>
-    
-    <footer class="footer2">
+
+    <div class="container container-edit-work">
+
+      
+
+      <div class="row row-grey-login">
+        <div class="col-12 col-grey-login">
+
+          <h2 class="h2-edit-work">Log In</h2>
+
+          <div class="row row-login">
+            <form action="/artist/login" method="post">
+            <div class="col-12 col-login d-flex">          
+                <input type="text" name="email" id="" placeholder="Email" />
+            </div>
+            <div class="col-12 col-login d-flex">    
+                <input type="password" name="password" id="" placeholder="Password" />
+            </div>
+            <div class="col-12 col-login d-flex"> 
+                <button class="btn btn-submit-general btn-login" type="submit">Login</button>          
+            </div>            
+          </form>
+            
+          </div>          
+
+        </div>
+        <div class="filler3"></div>
+      </div>
+
+      
+
+      
+
+    </div>
+
+    <div class="footer-login">
       <%- include('footer') %>
-    </footer>
+    </div>
+
     
 
   </body>

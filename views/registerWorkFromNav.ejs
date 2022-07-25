@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <title>The Gallery</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,43 +15,42 @@
 <body>
     <%- include('navbar') %>
 
+    <div class="container container-edit-work">
+        <h2 class="h2-edit-work">Add work</h2>
 
-    <h2>Hola registration form</h2>
-    
-
-
-    <form action="/work/saveWorkFormFromNav/0" method="post" id="formAddWork" enctype="multipart/form-data" >
-        <div class="form-group">
-          <label for="title">Title</label>
-          <input type="text" class="form-control" id="title" name="title" aria-describedby="" placeholder="Enter title">
-        </div>
-        <div class="form-group">
-            <label for="description">Description</label>
-            <textarea class="form-control rows="3" id="description" name="description" aria-describedby="" placeholder="Describe your work"></textarea>
-        </div>
-        <div class="form-group">
-            <label class="form-file-label" for="img" name="img" >Work photo</label>
-            <input type="file" class="form-control" id="img" name="img">          
-        </div>
-        <div>
-            
-            <select class="custom-select artist_select" id="artist_select" name="artist_select" onChange="handleSelectArtistChange()">
+        <form action="/work/saveWorkFormFromNav/0" method="post" id="formAddWork" enctype="multipart/form-data" >
+            <div class="form-group">
+            <label for="title">Title</label>
+            <input type="text" class="form-control" id="title" name="title" aria-describedby="" placeholder="Enter title">
+            </div>
+            <div class="form-group">
+                <label for="description">Description</label>
+                <textarea class="form-control rows="3" id="description" name="description" aria-describedby="" placeholder="Describe your work"></textarea>
+            </div>
+            <div class="form-group">
+                <label class="form-file-label" for="img" name="img" >Work photo</label>
+                <input type="file" class="form-control" id="img" name="img">          
+            </div>
+            <div>
                 
-                <option selected>Select Artist</option>
-                
-                <% resultArtist.forEach(artist => { %>
+                <select class="custom-select artist_select" id="artist_select" name="artist_select" onChange="handleSelectArtistChange()">
                     
-                    <option value="<%= artist.artist_id %>"><%= artist.name %></option>              
-                <% }) %>
+                    <option selected>Select Artist</option>
+                    
+                    <% resultArtist.forEach(artist => { %>
+                        
+                        <option value="<%= artist.artist_id %>"><%= artist.name %> <%= artist.last_name %></option>              
+                    <% }) %>
 
-                
-              </select>
-        </div>
+                    
+                </select>
+            </div>
 
-        <button type="submit" class="btn btn-primary">Submit</button>
-        
-    </form>
-
+            <button type="submit" class="btn btn-submit-general">Submit</button>
+            <div class="filler"></div>
+            
+        </form>
+    </div>
 
       <%- include('footer') %>
       <%- include('selectArtist') %>

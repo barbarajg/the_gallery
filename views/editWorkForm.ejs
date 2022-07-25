@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <title>The Gallery</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,9 +12,11 @@
 <body>
     <%- include('navbar') %>
 
-    <h2>Edit work</h2>
+    <div class="container container-edit-work">
+    <h2 class="h2-edit-work">Edit work</h2>
 
     <form action="/work/saveWorkEditForm/<%= result[0].work_id %>/<%= result[0].artist_id %>" method="post" enctype="multipart/form-data" >
+        <img src="/images/works/<%= result[0].img %>" width="200" alt="">
         <div class="form-group">
           <label for="title">Title</label>
           <input type="text" class="form-control" id="title" name="title" aria-describedby="" placeholder="Enter title" value="<%= result[0].title %>">
@@ -23,14 +26,14 @@
             <textarea class="form-control rows="3" id="description" name="description" aria-describedby="" placeholder="Describe your work" ><%= result[0].description %></textarea>
         </div>
         <div class="form-group">
-            <label class="form-file-label" for="img" name="img" >Work photo</label>
+            <label class="form-file-label" for="img" name="img" >Change photo <span style="font-size: 16px;">(leave blank to keep the current one)</span></label>
             <input type="file" class="form-control" id="img" name="img">          
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-submit-general">Submit</button>
       </form>
 
+    </div>
 
       <%- include('footer') %>
-
     </body>
   </html>

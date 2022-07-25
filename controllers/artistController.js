@@ -22,7 +22,10 @@ class Artist {
             }
       
             connection.query(sql, (error, result) => {
-              if (error) throw error;
+              //if (error) throw error;
+              if (error) {
+                res.send("Error en los datos introducidos no son válidos. Verifique que su email no se encuentre ya en el sistema.");
+              }
               res.render("login");
             });
         });
@@ -46,11 +49,11 @@ class Artist {
                 let artist_id = result[0].artist_id;
                 res.redirect(`/artist/oneArtist/${artist_id}`);
             } else {
-                res.send("Wrong password");
+                res.send("Wrong credentials");
             }
             });
         } else {
-            res.send("Wrong email");
+            res.send("Wrong credentials");
         }
         });
     };
@@ -114,7 +117,6 @@ class Artist {
         });
     };
 
-    // Muestra la vista de todos los artistas
     // Renderiza la vista principal, con todos los artistas
     // y todas las obras
     showAllArtists = (req, res) => {

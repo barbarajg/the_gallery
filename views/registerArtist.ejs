@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <title>The Gallery</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,44 +11,46 @@
 <body>
     <%- include('navbar') %>
 
-    <h2>Artist registration form</h2>
+    <div class="container container-edit-work">
+        <h2 class="h2-edit-work">Artist registration</h2>
 
-    <form action="/artist/registerArtist" method="post" enctype="multipart/form-data" >
-        <div class="form-group">
-          <label for="name">Name</label>
-          <input type="text" class="form-control" id="name" name="name" aria-describedby="" placeholder="Enter your name">
+        <form action="/artist/registerArtist" method="post" enctype="multipart/form-data" >
+            <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" id="name" name="name" aria-describedby="" placeholder="Enter your name">
+            </div>
+            <div class="form-group">
+                <label for="last_name">Last name</label>
+                <input type="text" class="form-control" id="last_name"  name="last_name" aria-describedby="" placeholder="Enter your last name">
+            </div>
+            <div class="form-group">
+                <label for="alias">Alias</label>
+                <input type="text" class="form-control" id="alias" name="alias" aria-describedby="" placeholder="Enter your alias">
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" id="email" name="email" aria-describedby="" placeholder="Enter your email">
+            </div>
+            <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" class="form-control" id="password" name="password" placeholder="Password">
+            </div>
+            <div class="form-group">
+                <label for="description">Description</label>
+                <textarea class="form-control rows="3" id="description" name="description" aria-describedby="" placeholder="Describe yourself and your artwork"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="phone_number">Phone number</label>
+                <input type="text" class="form-control" id="phone_number" name="phone_number" aria-describedby="" placeholder="Enter your phone number">
+            </div>
+            <div class="form-group">
+                <label class="form-file-label" for="img" name="img" >Your photo</label>
+                <input type="file" class="form-control" id="img" name="img">
+            
+            </div>
+            <button type="submit" class="btn btn-submit-general">Submit</button>
+        </form>
         </div>
-        <div class="form-group">
-            <label for="last_name">Last name</label>
-            <input type="text" class="form-control" id="last_name"  name="last_name" aria-describedby="" placeholder="Enter your last name">
-        </div>
-        <div class="form-group">
-            <label for="alias">Alias</label>
-            <input type="text" class="form-control" id="alias" name="alias" aria-describedby="" placeholder="Enter your alias">
-        </div>
-        <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" class="form-control" id="email" name="email" aria-describedby="" placeholder="Enter your email">
-        </div>
-        <div class="form-group">
-          <label for="password">Password</label>
-          <input type="password" class="form-control" id="password" name="password" placeholder="Password">
-        </div>
-        <div class="form-group">
-            <label for="description">Description</label>
-            <textarea class="form-control rows="3" id="description" name="description" aria-describedby="" placeholder="Describe yourself and your artwork"></textarea>
-        </div>
-        <div class="form-group">
-            <label for="phone_number">Phone number</label>
-            <input type="text" class="form-control" id="phone_number" name="phone_number" aria-describedby="" placeholder="Enter your phone number">
-        </div>
-        <div class="form-group">
-            <label class="form-file-label" for="img" name="img" >Your photo</label>
-            <input type="file" class="form-control" id="img" name="img">
-          
-        </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
-      </form>
 
       <%- include('footer') %>
 

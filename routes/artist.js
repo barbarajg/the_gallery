@@ -8,7 +8,6 @@ var router = express.Router();
 router.get("/registerArtist", artistController.showRegisterForm);
 
 // localhost:3000/artist/registerForm
-//router.post("/registerArtist", artistController.saveArtist);
 router.post("/registerArtist", uploadImage("artists"), artistController.saveArtist);
 
 // localhost:3000/artist/login
