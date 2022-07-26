@@ -104,7 +104,7 @@ class Artist {
         console.log(req.body);
         let { name, last_name, alias, email, description, phone_number } = req.body;
         let artist_id = req.params.artist_id;
-        let sql = `UPDATE artist SET name = "${name}", last_name = "${last_name}", alias = "${alias}", email = "${email}", description = "${description}", phone_number = "${phone_number}"," WHERE artist_id = ${artist_id}`;
+        let sql = `UPDATE artist SET name = "${name}", last_name = "${last_name}", alias = "${alias}", email = "${email}", description = "${description}", phone_number = "${phone_number}" WHERE artist_id = ${artist_id}`;
 
         if (req.file != undefined) {
             let img = req.file.filename;

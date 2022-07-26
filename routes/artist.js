@@ -22,13 +22,13 @@ router.get("/", artistController.showAll);
 // localhost:3000/artist/oneArtist/:artist_id
 router.get("/oneArtist/:artist_id", artistController.showOneArtist);
 
+// localhost:3000/artist/allArtists
+router.get("/allArtists", artistController.showAllArtists);
+
 // localhost:3000/artist/editArtist/:artist_id
 router.get("/editArtist/:artist_id", artistController.showEditArtist);
 
 // localhost:3000/artist/editArtist/:artist_id
 router.post("/editArtist/:artist_id", uploadImage("artists"), artistController.saveEditedArtist);
-
-// localhost:3000/artist/allArtists
-router.get("/allArtists", artistController.showAllArtists);
 
 module.exports = router;

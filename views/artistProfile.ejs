@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>The Gallery</title>
+    <title>Profile-The Gallery</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel='stylesheet' href='/stylesheets/style.css' />
     <%- include('bootstrap') %>
@@ -13,7 +13,8 @@
       <h2>ARTIST INFO</h2>
       <div class="row row-profile">
         <div class="col-6 col-sm-12 col-xs-12 col-profile-photo d-flex" style="background-image: url('/images/artists/<%= resultArtist[0].img %>');">  
-          <a class="btn-general btn-profile" href="/work/showWorkForm/<%= resultArtist[0].artist_id %>">Add Work</a>               
+          <a class="btn-general btn-profile" href="/work/showWorkForm/<%= resultArtist[0].artist_id %>">Add Work</a>         
+          <a class="btn-general btn-profile" href="/artist/editArtist/<%= resultArtist[0].artist_id %>">Edit Profile</a>      
         </div>
         <div class="col-6 col-sm-12 col-xs-12 col-profile-text">
           <h3 class="h3-profile-artist-data"><%= resultArtist[0].name %> <%= resultArtist[0].last_name %></h3>

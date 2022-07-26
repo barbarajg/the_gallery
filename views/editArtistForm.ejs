@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>The Gallery</title>
+    <title>Edit Profile-The Gallery</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,40 +12,42 @@
 <body>
     <%- include('navbar') %>
 
-    <h2>Edit artist info</h2>
+    <div class="container container-edit-work">
+    <h2 class="h2-edit-work">Edit profile</h2>
     
-    <form action="/artist/editArtist/<%= result[0].artist_id %>" method="post" enctype="multipart/form-data" >
-        <div class="form-group">
-          <label for="name">Name</label>
-          <input type="text" class="form-control" id="name" name="name" aria-describedby="" value="<%= result[0].name %>">
+        <form action="/artist/editArtist/<%= result[0].artist_id %>" method="post" enctype="multipart/form-data" >
+            <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" id="name" name="name" aria-describedby="" value="<%= result[0].name %>">
+            </div>
+            <div class="form-group">
+                <label for="last_name">Last name</label>
+                <input type="text" class="form-control" id="last_name"  name="last_name" aria-describedby="" value="<%= result[0].last_name %>">
+            </div>
+            <div class="form-group">
+                <label for="alias">Alias</label>
+                <input type="text" class="form-control" id="alias" name="alias" aria-describedby="" value="<%= result[0].alias %>">
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" id="email" name="email" aria-describedby="" value="<%= result[0].email %>">
+            </div>
+            <div class="form-group">
+                <label for="description">Description</label>
+                <textarea class="form-control rows="3" id="description" name="description" aria-describedby="" placeholder=""><%= result[0].description %></textarea>
+            </div>
+            <div class="form-group">
+                <label for="phone_number">Phone number</label>
+                <input type="text" class="form-control" id="phone_number" name="phone_number" aria-describedby="" value="<%= result[0].phone_number %>">
+            </div>
+            <div class="form-group">
+                <label class="form-file-label" for="img" name="img" >Your photo</label>
+                <input type="file" class="form-control" id="img" name="img">
+            
+            </div>
+            <button type="submit" class="btn btn-submit-general">Submit</button>
+        </form>
         </div>
-        <div class="form-group">
-            <label for="last_name">Last name</label>
-            <input type="text" class="form-control" id="last_name"  name="last_name" aria-describedby="" value="<%= result[0].last_name %>">
-        </div>
-        <div class="form-group">
-            <label for="alias">Alias</label>
-            <input type="text" class="form-control" id="alias" name="alias" aria-describedby="" value="<%= result[0].alias %>">
-        </div>
-        <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" class="form-control" id="email" name="email" aria-describedby="" value="<%= result[0].email %>">
-        </div>
-        <div class="form-group">
-            <label for="description">Description</label>
-            <textarea class="form-control rows="3" id="description" name="description" aria-describedby="" placeholder=""></textarea><%= result[0].description %></textarea>
-        </div>
-        <div class="form-group">
-            <label for="phone_number">Phone number</label>
-            <input type="text" class="form-control" id="phone_number" name="phone_number" aria-describedby="" value="<%= result[0].phone_number %>">
-        </div>
-        <div class="form-group">
-            <label class="form-file-label" for="img" name="img" >Your photo</label>
-            <input type="file" class="form-control" id="img" name="img">
-          
-        </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
-      </form>
 
       <%- include('footer') %>
 
